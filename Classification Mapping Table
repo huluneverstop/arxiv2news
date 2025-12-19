@@ -1,0 +1,154 @@
+字段	学科（英文）	学科（中文）
+astro-ph	Astrophysics	天体物理
+astro-ph.CO	Cosmology and Nongalactic Astrophysics	宇宙学与非规则天体物理学
+astro-ph.EP	Earth and Planetary Astrophysics	地球与行星天体物理学
+astro-ph.GA	Astrophysics of Galaxies	星系的天体物理学
+astro-ph.HE	High Energy Astrophysical Phenomena	高能天体物理现象
+astro-ph.IM	Instrumentation and Methods for Astrophysics	天体物理学的仪器和方法
+astro-ph.SR	Solar and Stellar Astrophysics	太阳与恒星天体物理学
+cond-mat.dis-nn	Disordered Systems and Neural Networks	无序系统与神经网络
+cond-mat.mes-hall	Mesoscale and Nanoscale Physics	中尺度和纳米尺度物理学
+cond-mat.mtrl-sci	Materials Science	材料科学
+cond-mat.other	Other Condensed Matter	其他凝聚态
+cond-mat.quant-gas	Quantum Gases	量子气体
+cond-mat.soft	Soft Condensed Matter	软凝聚物
+cond-mat.stat-mech	Statistical Mechanics	统计力学
+cond-mat.str-el	Strongly Correlated Electrons	强关联电子
+cond-mat.supr-con	Superconductivity	超导现象
+cs.AI	Artificial Intelligence	人工智能
+cs.AR	Hardware Architecture	硬件架构
+cs.CC	Computational Complexity	计算复杂性
+cs.CE	Computational Engineering, Finance, and Science	计算工程，金融和科学
+cs.CG	Computational Geometry	计算几何
+cs.CL	Computation and Language	计算与语言
+cs.CR	Cryptography and Security	密码学与保安
+cs.CV	Computer Vision and Pattern Recognition	计算机视觉与模式识别
+CY	Computers and Society	电脑与社会
+cs.DB	Databases	数据库
+cs.DC	Distributed, Parallel, and Cluster Computing	分布式、并行和集群计算
+cs.DL	Digital Libraries	数字仓库
+cs.DM	Discrete Mathematics	离散数学
+cs.DS	Data Structures and Algorithms	数据结构和算法
+cs.ET	Emerging Technologies	新兴科技
+cs.FL	Formal Languages and Automata Theory	形式语言与自动机理论
+cs.GL	General Literature	一般文学
+cs.GR	Graphics	图形
+cs.GT	Computer Science and Game Theory	计算机科学与博弈论
+cs.HC	Human-Computer Interaction	人机交互
+cs.IR	Information Retrieval	信息检索
+cs.IT	Information Theory	信息理论
+cs.LG	Learning	学习
+cs.LO	Logic in Computer Science	计算机科学中的逻辑
+cs.MA	Multiagent Systems	多代理系统
+cs.MM	Multimedia	多媒体
+cs.MS	Mathematical Software	数学软件
+cs.NA	Numerical Analysis	数值分析
+cs.NE	Neural and Evolutionary Computing	神经和进化计算
+cs.NI	Networking and Internet Architecture	网络与互联网架构
+cs.OH	Other Computer Science	其他计算机科学
+cs.OS	Operating Systems	操作系统
+cs.PF	Performance	性能
+cs.PL	Programming Languages	编程语言
+cs.RO	Robotics	机器人技术
+cs.SC	Symbolic Computation	符号计算
+cs.SD	Sound	声音
+cs.SE	Software Engineering	软件工程
+cs.SI	Social and Information Networks	社会和信息网络
+cs.SY	Systems and Control	系统及控制
+econ.EM	Econometrics	计量经济学
+eess.AS	Audio and Speech Processing	音频及语音处理
+eess.IV	Image and Video Processing	图像和视频处理
+eess.SP	Signal Processing	信号处理
+gr-qc	General Relativity and Quantum Cosmology	广义相对论和量子宇宙学
+hep-ex	High Energy Physics - Experiment	高能物理实验
+hep-lat	High Energy Physics - Lattice	高能物理-晶格
+hep-ph	High Energy Physics - Phenomenology	高能物理-现象学
+hep-th	High Energy Physics - Theory	高能物理理论
+math.AC	Commutative Algebra	交换代数
+math.AG	Algebraic Geometry	代数几何
+math.AP	Analysis of PDEs	偏微分方程分析
+math.AT	Algebraic Topology	代数拓扑
+math.CA	Classical Analysis and ODEs	传统分析和微分方程
+math.CO	Combinatorics	组合数学
+math.CT	Category Theory	范畴理论
+math.CV	Complex Variables	复杂变量
+math.DG	Differential Geometry	微分几何
+math.DS	Dynamical Systems	动力系统
+math.FA	Functional Analysis	功能分析
+math.GM	General Mathematics	普通数学
+math.GN	General Topology	点集拓扑学
+math.GR	Group Theory	群论
+math.GT	Geometric Topology	几何拓扑学
+math.HO	History and Overview	历史和概述
+math.IT	Information Theory	信息理论
+math.KT	K-Theory and Homology	K 理论与同调
+math.LO	Logic	逻辑
+math.MG	Metric Geometry	度量几何学
+math.MP	Mathematical Physics	数学物理
+math.NA	Numerical Analysis	数值分析
+math.NT	Number Theory	数论
+math.OA	Operator Algebras	算子代数
+math.OC	Optimization and Control	优化和控制
+math.PR	Probability	概率
+math.QA	Quantum Algebra	量子代数
+math.RA	Rings and Algebras	环与代数
+math.RT	Representation Theory	表示论
+math.SG	Symplectic Geometry	辛几何
+math.SP	Spectral Theory	光谱理论
+math.ST	Statistics Theory	统计学理论
+math-ph	Mathematical Physics	数学物理
+nlin.AO	Adaptation and Self-Organizing Systems	适应与自组织系统
+nlin.CD	Chaotic Dynamics	混沌动力学
+nlin.CG	Cellular Automata and Lattice Gases	元胞自动机与格子气体
+nlin.PS	Pattern Formation and Solitons	模式形成与孤子
+nlin.SI	Exactly Solvable and Integrable Systems	严格可解可积系统
+nucl-ex	Nuclear Experiment	核试验
+nucl-th	Nuclear Theory	核理论
+physics.acc-ph	Accelerator Physics	加速器物理学
+physics.ao-ph	Atmospheric and Oceanic Physics	大气和海洋物理学
+physics.app-ph	Applied Physics	应用物理学
+physics.atm-clus	Atomic and Molecular Clusters	原子和分子团簇
+physics.atom-ph	Atomic Physics	原子物理学
+physics.bio-ph	Biological Physics	生物物理学
+physics.chem-ph	Chemical Physics	化学物理
+physics.class-ph	Classical Physics	经典物理学
+physics.comp-ph	Computational Physics	计算物理学
+physics.data-an	Data Analysis, Statistics and Probability	数据分析、统计和概率
+physics.ed-ph	Physics Education	物理教育
+physics.flu-dyn	Fluid Dynamics	流体动力学
+physics.gen-ph	General Physics	普通物理
+physics.geo-ph	Geophysics	地球物理学
+physics.hist-ph	History and Philosophy of Physics	物理学的历史与哲学
+physics.ins-det	Instrumentation and Detectors	仪器和探测器
+physics.med-ph	Medical Physics	医学物理学
+physics.optics	Optics	光学
+physics.plasm-ph	Plasma Physics	等离子体物理
+physics.pop-ph	Popular Physics	大众物理
+physics.soc-ph	Physics and Society	物理学与社会
+physics.space-ph	Space Physics	空间物理学
+q-bio.BM	Biomolecules	生物分子
+q-bio.CB	Cell Behavior	细胞行为
+q-bio.GN	Genomics	基因组学
+q-bio.MN	Molecular Networks	分子网络
+q-bio.NC	Neurons and Cognition	神经元与认知
+q-bio.OT	Other Quantitative Biology	其他定量生物学
+q-bio.PE	Populations and Evolution	种群与进化
+q-bio.QM	Quantitative Methods	定量方法
+q-bio.SC	Subcellular Processes	亚细胞突起
+q-bio.TO	Tissues and Organs	组织和器官
+q-fin.CP	Computational Finance	金融工程
+q-fin.EC	Economics	经济学
+q-fin.GN	General Finance	财务概述
+q-fin.MF	Mathematical Finance	数学金融
+q-fin.PM	Portfolio Management	投资组合管理
+q-fin.PR	Pricing of Securities	证券定价
+q-fin.RM	Risk Management	风险管理
+q-fin.ST	Statistical Finance	金融统计
+q-fin.TR	Trading and Market Microstructure	交易与市场微观结构
+quant-ph	Quantum Physics	量子物理学
+stat.AP	Applications	应用
+stat.CO	Computation	计算
+stat.ME	Methodology	方法论
+stat.ML	Machine Learning	机器学习
+stat.OT	Other Statistics	其他统计学
+stat.TH	Statistics Theory	统计学理论
