@@ -89,7 +89,7 @@ def wrap_paragraph(text, font, max_width, draw):
     return lines
 
 
-def add_caption(img, caption, font_path="/media/home/pengyunning/arXiv2xhs/times.ttf", font_size=26, margin=25):
+def add_caption(img, caption, font_path=".../times.ttf", font_size=26, margin=25):
     img_w, img_h = img.size
     font = ImageFont.truetype(font_path, font_size)
 
@@ -245,8 +245,8 @@ def process_pdf(pdf_path, output_dir, api_key):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pdf", default='/media/home/pengyunning/arXiv2xhs/2511.19827v1.pdf', help="Input PDF")
-    parser.add_argument("--output", default='/media/home/pengyunning/arXiv2xhs/output/20251205/', help="Output directory")
+    parser.add_argument("--pdf", default='...', help="Input PDF")
+    parser.add_argument("--output", default='...', help="Output directory")
     args = parser.parse_args()
 
     process_pdf(args.pdf, args.output, os.getenv('API_KEY'))

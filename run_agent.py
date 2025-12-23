@@ -36,7 +36,7 @@ async def main_workflow(query: str, id_list: List[str], category: str = None, ti
     """主工作流程"""
     
     # 设置工作路径
-    work_dir = "/media/home/pengyunning/arXiv2xhs/"
+    work_dir = "..."
     os.chdir(work_dir)
     logger.info(f"设置工作路径: {work_dir}")
 
