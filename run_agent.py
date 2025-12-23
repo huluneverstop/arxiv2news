@@ -189,11 +189,11 @@ async def main_workflow(query: str, id_list: List[str], category: str = None, ti
 
 def main():
     """主函数"""
-    parser = argparse.ArgumentParser(description='资讯生成')
+    parser = argparse.ArgumentParser(description='资讯生成:使用关键词批量搜索或使用arxiv id精准搜索')
     parser.add_argument('--query', '-q', type=str, default=None, help='搜索关键词，批量搜索') #"generation"
+    parser.add_argument('--id_list', '-id', type=str, nargs='*', default=["2512.10950"], help='搜索id列表，精确查找') #["2512.04677","2512.03350"]
     parser.add_argument('--category', '-c', type=str, nargs='*', default=None, help='搜索类别') #["cs.AI","cs.CV"]
     parser.add_argument('--time-code', '-t', type=str, default="20251101", help='起始年份')
-    parser.add_argument('--id_list', '-id', type=str, nargs='*', default=["2512.10950"], help='搜索id列表，精确查找') #["2512.04677","2512.03350"]
     parser.add_argument('--max-results', '-n', type=int, default=2, help='最大搜索结果数量')
     parser.add_argument('--start-index', '-i', type=int, default=0, help='起始索引')
     parser.add_argument('--min-score', '-s', type=float, default=6.5, help='最低质量分数阈值')
