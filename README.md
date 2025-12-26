@@ -2,6 +2,8 @@
 
 ## 环境配置
 
+查看 *requirements.txt*
+
 ## 如何使用
 
 ### 1. 设置apikey
