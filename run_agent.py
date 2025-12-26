@@ -32,19 +32,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-async def main_workflow(query: str, id_list: List[str], category: str = None, time_code: str = None, max_results: int = 10, start_index:int=0,min_quality_score: float = 6.0, api_key: str = None):
+async def main_workflow(query: str, id_list: List[str], category: str = None, time_code: str = None, max_results: int = 10, start_index:int=0,min_quality_score: float = 6.0, work_dir:str =None):
     """主工作流程"""
     
-    # 设置工作路径
-    work_dir = "..."
     os.chdir(work_dir)
-    logger.info(f"设置工作路径: {work_dir}")
+    logger.info(f"工作路径设置为: {work_dir}")
 
     load_dotenv()
     
     # 获取API密钥
-    if not api_key:
-        api_key = os.getenv('API_KEY')
+    api_key = os.getenv('API_KEY')
     if not api_key:
         logger.error("请提供千问API密钥")
         return
@@ -193,11 +190,11 @@ def main():
     parser.add_argument('--query', '-q', type=str, default=None, help='搜索关键词，批量搜索') #"generation"
     parser.add_argument('--id_list', '-id', type=str, nargs='*', default=["2512.10950"], help='搜索id列表，精确查找') #["2512.04677","2512.03350"]
     parser.add_argument('--category', '-c', type=str, nargs='*', default=None, help='搜索类别') #["cs.AI","cs.CV"]
-    parser.add_argument('--time-code', '-t', type=str, default="20251101", help='起始年份')
-    parser.add_argument('--max-results', '-n', type=int, default=2, help='最大搜索结果数量')
+    parser.add_argument('--time-code', '-t', type=str, default="20251101", help='起始时间')
+    parser.add_argument('--max-results', '-n', type=int, default=20, help='最大搜索结果数量')
     parser.add_argument('--start-index', '-i', type=int, default=0, help='起始索引')
     parser.add_argument('--min-score', '-s', type=float, default=6.5, help='最低质量分数阈值')
-    parser.add_argument('--api-key', '-k', type=str, help='千问API密钥')
+    parser.add_argument('--work-dir', '-d', type=str, default="./", help='工作路径')
     
     args = parser.parse_args()
     
@@ -210,7 +207,7 @@ def main():
         max_results=args.max_results,
         start_index=args.start_index,
         min_quality_score=args.min_score,
-        api_key=args.api_key
+        work_dir=args.work_dir
     ))
     
     return 0 if success else 1

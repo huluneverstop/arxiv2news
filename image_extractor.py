@@ -2,8 +2,8 @@
 # -*- coding:utf-8 -*-
 """
 图片提取模块
-从arXiv论文中提取图片和识别图注
-支持从摘要、网页和PDF中提取图片
+
+用于从arxiv论文和对应的project页面（如有）中提取图片
 """
 
 import os
@@ -28,38 +28,6 @@ import urllib.parse
 from tqdm import tqdm
 # from hero_image_selector import HeroImageSelector
 
-# 配置日志
-# def setup_logging():
-#     """配置日志系统"""
-#     # 创建logs目录
-#     log_dir = os.path.join(os.path.dirname(__file__), 'logs')
-#     os.makedirs(log_dir, exist_ok=True)
-    
-#     # 配置日志格式
-#     log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    
-#     # 创建logger
-#     logger = logging.getLogger(__name__)
-#     logger.setLevel(logging.INFO)
-    
-#     # 避免重复添加handler
-#     if not logger.handlers:
-#         # 控制台处理器
-#         console_handler = logging.StreamHandler(sys.stdout)
-#         console_handler.setLevel(logging.INFO)
-#         console_formatter = logging.Formatter(log_format)
-#         console_handler.setFormatter(console_formatter)
-#         logger.addHandler(console_handler)
-        
-#         # 文件处理器
-#         log_file = os.path.join(log_dir, 'image_extractor.log')
-#         file_handler = logging.FileHandler(log_file, encoding='utf-8')
-#         file_handler.setLevel(logging.INFO)
-#         file_formatter = logging.Formatter(log_format)
-#         file_handler.setFormatter(file_formatter)
-#         logger.addHandler(file_handler)
-    
-#     return logger
 
 # 初始化日志
 logger = logging.getLogger(__name__)
@@ -114,7 +82,8 @@ class ImageExtractor:
             
             all_images = []
             
-            # 策略1: 优先从HTML版本获取图片
+            # 策略1: 优先从HTML版本获取图片 由于arxiv的html修改后展示的是分辨率较差的缩略图，导致爬取图片分辨率低
+            # 如果分辨率太低小红书上传的效果非常差，源文件也下载失败的话最方便的是手动截图
             logger.info("策略1: 尝试从HTML版本获取图片")
             html_images = await self._extract_from_html(paper)
             if html_images:
@@ -139,6 +108,7 @@ class ImageExtractor:
                     
                     
             else:
+                # 从源文件包中下载：常因网络原因下载耗时长或下载失败
                 # logger.info("HTML方法未获取到图片，尝试源文件包方法")
                 # # # HTML方法失败，尝试源文件包
                 # # source_images = await self._extract_from_source(paper)
@@ -146,7 +116,7 @@ class ImageExtractor:
                 # #     all_images.extend(source_images)
                 # #     logger.info(f"从源文件包获取到 {len(source_images)} 张图片")
                 # # else:
-                # #     logger.info("源文件包方法也失败，考虑PDF方法（暂时注释）")
+                # #     logger.info("源文件包下载失败")
                 # #     # PDF方法暂时注释
                 # #     # pdf_images = await self._extract_from_pdf(paper)
                 # #     # if pdf_images:
@@ -170,16 +140,6 @@ class ImageExtractor:
                 # img['paper_title'] = title
                 img['img_name'] = img.get('filename', '')
                 img['extraction_time'] = datetime.now().isoformat()
-            
-            # 选择首图
-            # logger.info("开始选择首图...")
-            # hero_image = await self.hero_image_selector.select_hero_image(paper, unique_images)
-            # if hero_image:
-            #     # 标记为首图
-            #     hero_image['is_hero_image'] = True
-            #     logger.info(f"已选择首图: {hero_image.get('filename', '')}")
-            # else:
-            #     logger.warning("未找到合适的首图")
             
             logger.info(f"论文 {paper_id} 图片提取完成，共 {len(unique_images)} 张")
             return unique_images
@@ -257,18 +217,6 @@ class ImageExtractor:
         else:
             return 'project'
         
-        # # 项目链接（包含项目相关关键词）
-        # project_keywords = [
-        #     'project', 'demo', 'paper', 'page', 'website', 'site',
-        #     'app', 'tool', 'software', 'code', 'repository', 'repo'
-        # ]
-        
-        # for keyword in project_keywords:
-        #     if keyword in url_lower:
-        #         return 'project'
-        
-        # # 其他链接
-        # return 'other'
     
     async def _process_additional_links(self, url_collector: Dict[str, List], image_collector: List, paper: Dict[str, Any]) -> List[Dict[str, Any]]:
         """
@@ -282,13 +230,6 @@ class ImageExtractor:
             额外的图片列表
         """
         
-        # 初始化链接状态
-        # github_processed = False
-        # project_processed = False
-        
-        # # 记录初始链接数量
-        # initial_github_count = len(url_collector['github'])
-        # initial_project_count = len(url_collector['project'])
         
         # 当url_collector状态为false时不断循环处理
         while not url_collector['state']:

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-arXiv文章搜索脚本
-使用arxiv库搜索文章并将结果保存到output文件夹
+arXiv文章搜索
+使用arxiv库搜索文章
 """
 
 import arxiv
